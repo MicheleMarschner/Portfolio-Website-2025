@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="./libraries/glide.theme.css">
     <title>Michele code</title>
     <link rel="icon" type="image/x-icon" href="./img/logos/logo4.png">
+
+    <!-- Matomo -->
+    <script>
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://michelemarschnerportfolio2025netlifyapp.matomo.cloud/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src='https://cdn.matomo.cloud/michelemarschnerportfolio2025netlifyapp.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
 </head>
 <body>
 
@@ -48,6 +64,11 @@
           </div>
           <div class="quader"></div>
         </div>
+        <div class="timeline-container timeline-1">
+          <div class="diamond"><span>01</span></div>
+          <div class="line"></div>
+          <div class="text">ABOUT ME</div>
+        </div>
         <div class="wrapper">
           <p>The smallest common denominator in all of my previous experiences is at the same time my biggest passion: To analyse situations, to abstract and dismantle them in the context of the bigger picture and to find pragmatic solutions.
             Currently, I am interested in a junior fullstack developer role where I can contribute my analytical-integrative thinking and logical abilities coupled with my strong interpersonal skills to a motivated team to create together something that matters.
@@ -56,13 +77,13 @@
         </div>
       </div> 
     </div>
-    <div class="timeline-container">
-      <div class="diamond"><span>01</span></div>
-      <div class="line"></div>
-      <div class="text">ABOUT ME</div>
-    </div>
   </div>
   <div class="section" id="section-two">
+    <div class="timeline-container">
+      <div class="diamond"><span>02</span></div>
+      <div class="line"></div>
+      <div class="text">SKILLS</div>
+    </div>
     <div class="wrapper">
       <div class="title"><h1>what i bring to the table</h1></div>
       <div class="hex-grid">
@@ -118,19 +139,56 @@
         </div>
     </div>
     </div>
-    <div class="timeline-container">
-      <div class="diamond"><span>02</span></div>
-      <div class="line"></div>
-      <div class="text">SKILLS</div>
-    </div>
+    
   </div>
   <div class="section" id="section-three">
+    <div class="timeline-container">
+      <div class="diamond"><span>03</span></div>
+      <div class="line"></div>
+      <div class="text">PROJECTS</div>
+    </div>
     <div display="flex">
       <h1>Projects</h1>
       <div class="wrapper">
         <div class="glide">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="card">
+                  <a
+                    href="https://ticketforvisa.com/"
+                    target="_blank"
+                  >
+                    <div class="card-picture card-picture-6"></div>
+        
+                    <h4 class="card-header">
+                      <span class="card-header-wrapper">Booking App</span>
+                    </h4>
+        
+                    <div class="card-body">
+                      <p class="card-text">
+                        <span>Aim: </span> building a high-performance, SEO-optimized website with a seamless booking experience, tailored for lead generation and streamlined sales communication.
+                      </p>
+                      <p class="card-text">
+                        <span>Tech Stack: </span> JavaScript | NextJS &
+                      Tailwind | Figma, Redis, Resend, Paypal-SDK, Contentful, Fuse.js, Google Analytics
+                      </p>
+                    </div>
+        
+                    <div class="card-footer">
+                      <div class="text-muted"
+                        >April-June 2025</div
+                      >
+                      <a
+                      href="https://github.com/MicheleMarschner/ticketforvisa"
+                      target="_blank"
+                      >
+                      <div class="social-item social-item-3"></div>
+                      </a>
+                    </div>
+                  </a>
+                </div>
+              </li>
               <li class="glide__slide">
                 <div class="card">
                   <a
@@ -167,49 +225,128 @@
                 </div>
               </li>
               <li class="glide__slide">
-                <div class="card">
-                  <a href="https://todo-app-db1295.netlify.app" target="_blank">
-                    <div class="card-picture card-picture-2"></div>
-        
-                    <h4 class="card-header">
-                      <span class="card-header-wrapper">ToDo App</span>
-                    </h4>
-        
-                    <div class="card-body">
-                      <p class="card-text">
-                        <span>Aim: </span>developing a fullstack application with a
-                        focus on functional components and hooks in React
-                      </p>
-                      <p class="card-text">
-                        <span>Tech Stack: </span>JavaScript | Frontend: ReactJS &
-                        Bootstrap | Backend: NodeJS / Express, MongoDB / Mongoose
-                        | 3rd party APIs
-                      </p>
+              <div class="card">
+                <a
+                  href="https://admin-dashboard-124.netlify.app/"
+                  target="_blank"
+                >
+                  <div class="card-picture card-picture-4"></div>
+      
+                  <h4 class="card-header">
+                    <span class="card-header-wrapper">Admin Dashboard</span>
+                  </h4>
+      
+                  <div class="card-body">
+                    <p class="card-text">
+                      <span>Aim: </span>developing XXX
+                    </p>
+                    <p class="card-text">
+                      <span>Tech Stack: </span>JavaScript | Frontend: ReactJS &
+                      Bootstrap | echarts, apexcharts
+                    </p>
+                  </div>
+      
+                  <div class="card-footer">
+                    <div class="text-muted"
+                      >September 2024</div
+                    >
+                    <a
+                    href="https://github.com/MicheleMarschner/adminDashboardReact"
+                    target="_blank"
+                    >
+                    <div class="social-item social-item-3"></div>
+                    </a>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="card">
+                <a
+                  href="https://e-commerce-shop-frontend-six.vercel.app/"
+                  target="_blank"
+                >
+                  <div class="card-picture card-picture-5"></div>
+      
+                  <h4 class="card-header">
+                    <span class="card-header-wrapper">Ecommerce Shop</span>
+                  </h4>
+      
+                  <div class="card-body">
+                    <p class="card-text">
+                      <span>Aim: </span>built an eCommerce platform with Next.js and Stripe to be up-to-date with commonly used frameworks and payment processing technologies. 
+                    </p>
+                    <p class="card-text">
+                      <span>Tech Stack: </span>JavaScript | Frontend: ReactJS, styled-components | Backend: NextJS | Stripe
+                    </p>
+                  </div>
+      
+                  <div class="card-footer">
+                    <div class="text-muted"
+                      >September 2024</div
+                    >
+                    <div class="wrapper">
+                      <a
+                        href="https://github.com/MicheleMarschner/eCommerceShop_frontend"
+                        target="_blank"
+                        >
+                        <div class="social-item social-item-3"></div>
+                      </a>
+                      <a
+                        href="https://github.com/MicheleMarschner/eCommerceShop_admindashboard"
+                        target="_blank"
+                        >
+                        <div class="social-item social-item-3"></div>
+                      </a>
                     </div>
-        
-                    <div class="card-footer">
-                      <div class="text-muted"
-                        >2020; after 2 months in the bootcamp</div
-                      >
-                      <div class="wrapper">
-                        <a
-                          href="https://github.com/MicheleMarschner/ToDoApp-server"
-                          target="_blank"
-                          >
-                          <div class="social-item social-item-3"></div>
-                        </a>
-                        <a
-                          href="https://github.com/MicheleMarschner/ToDoApp-client"
-                          target="_blank"
-                          >
-                          <div class="social-item social-item-3"></div>
-                        </a>
-                      </div>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="card">
+                <a href="https://todo-app-db1295.netlify.app" target="_blank">
+                  <div class="card-picture card-picture-2"></div>
+      
+                  <h4 class="card-header">
+                    <span class="card-header-wrapper">ToDo App</span>
+                  </h4>
+      
+                  <div class="card-body">
+                    <p class="card-text">
+                      <span>Aim: </span>developing a fullstack application with a
+                      focus on functional components and hooks in React
+                    </p>
+                    <p class="card-text">
+                      <span>Tech Stack: </span>JavaScript | Frontend: ReactJS &
+                      Bootstrap | Backend: NodeJS / Express, MongoDB / Mongoose
+                      | 3rd party APIs
+                    </p>
+                  </div>
+      
+                  <div class="card-footer">
+                    <div class="text-muted"
+                      >2020; after 2 months in the bootcamp</div
+                    >
+                    <div class="wrapper">
+                      <a
+                        href="https://github.com/MicheleMarschner/ToDoApp-server"
+                        target="_blank"
+                        >
+                        <div class="social-item social-item-3"></div>
+                      </a>
+                      <a
+                        href="https://github.com/MicheleMarschner/ToDoApp-client"
+                        target="_blank"
+                        >
+                        <div class="social-item social-item-3"></div>
+                      </a>
                     </div>
-                  </a>
-                </div>
-              </li>
-              <li class="glide__slide">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="glide__slide">
                 <div class="card">
                   <a href="#portfolio">
                   <div class="card-picture card-picture-3">
@@ -262,85 +399,6 @@
             <li class="glide__slide">
               <div class="card">
                 <a
-                  href="https://admin-dashboard-124.netlify.app/"
-                  target="_blank"
-                >
-                  <div class="card-picture card-picture-4"></div>
-      
-                  <h4 class="card-header">
-                    <span class="card-header-wrapper">Admin Dashboard</span>
-                  </h4>
-      
-                  <div class="card-body">
-                    <p class="card-text">
-                      <span>Aim: </span>developing XXX
-                    </p>
-                    <p class="card-text">
-                      <span>Tech Stack: </span>JavaScript | Frontend: ReactJS &
-                      Bootstrap | echarts, apexcharts
-                    </p>
-                  </div>
-      
-                  <div class="card-footer">
-                    <div class="text-muted"
-                      >September 2024</div
-                    >
-                    <a
-                    href="https://github.com/MicheleMarschner/adminDashboardReact"
-                    target="_blank"
-                    >
-                    <div class="social-item social-item-3"></div>
-                    </a>
-                  </div>
-                </a>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="card">
-                <a
-                  href="https://e-commerce-shop-frontend-six.vercel.app/"
-                  target="_blank"
-                >
-                  <div class="card-picture card-picture-5"></div>
-      
-                  <h4 class="card-header">
-                    <span class="card-header-wrapper">Ecommerce Shop</span>
-                  </h4>
-      
-                  <div class="card-body">
-                    <p class="card-text">
-                      <span>Aim: </span>fullstack application for 
-                    </p>
-                    <p class="card-text">
-                      <span>Tech Stack: </span>JavaScript | Frontend: ReactJS, styled-components | Backend: NextJS | Stripe
-                    </p>
-                  </div>
-      
-                  <div class="card-footer">
-                    <div class="text-muted"
-                      >September 2024</div
-                    >
-                    <div class="wrapper">
-                      <a
-                        href="https://github.com/MicheleMarschner/eCommerceShop_frontend"
-                        target="_blank"
-                        >
-                        <div class="social-item social-item-3"></div>
-                      </a>
-                      <a
-                        href="https://github.com/MicheleMarschner/eCommerceShop_admindashboard"
-                        target="_blank"
-                        >
-                        <div class="social-item social-item-3"></div>
-                      </a>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="card">
-                <a
                   href=""
                   target="_blank"
                 >
@@ -384,13 +442,13 @@
         </div>
       </div>
     </div>
-    <div class="timeline-container">
-      <div class="diamond"><span>03</span></div>
-      <div class="line"></div>
-      <div class="text">PROJECTS</div>
-    </div>
   </div>
   <div class="section" id="section-four">
+    <div class="timeline-container">
+      <div class="diamond"><span>04</span></div>
+      <div class="line"></div>
+      <div class="text">CONTACT</div>
+    </div>
     <div>
       <h1>Let's Connect</h1>
       <div class="wrapper">
@@ -416,11 +474,6 @@
           </ul>
         </div>
       </div>
-    </div>
-    <div class="timeline-container">
-      <div class="diamond"><span>04</span></div>
-      <div class="line"></div>
-      <div class="text">CONTACT</div>
     </div>
   </div>
 </div>

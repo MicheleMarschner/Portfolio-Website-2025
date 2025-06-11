@@ -136,7 +136,7 @@ input:focus,input.active {
 }
 
 .timeline-container {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   width: 100%;
@@ -303,12 +303,12 @@ nav a {
   width: 100px;
   height: 115px;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background: var(--text);
+  background: var(--bg-light);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--text);
+  color: var(--bg-light);
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
@@ -316,7 +316,7 @@ nav a {
 }
 
 .hex img {
-  filter: brightness(0) saturate(100%) invert(32%) sepia(0%) saturate(3040%) hue-rotate(356deg) brightness(97%) contrast(81%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(3040%) hue-rotate(0) brightness(97%) contrast(81%);
 }
 
 .hex::before {
@@ -325,7 +325,7 @@ nav a {
   width: 98%;
   height: 98%;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background: var(--bg-light); 
+  background: var(--bg-dark); 
   transition: 0.3s ease-in-out;
 }
 
@@ -355,7 +355,7 @@ nav a {
 
 .hex div {
   position: absolute;
-  color: var(--text);
+  color: var(--bg-light);
   font-size: 0.8rem;
   font-weight: bold;
   z-index: 2;
@@ -496,6 +496,16 @@ nav a {
   background-repeat: no-repeat;
 }
 
+.card-picture-6 {
+  background: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('./img/portfolio_screenshots/ticketforvisa_screenshot.jpg') center;
+  background-size: cover;
+}
+
 .card-text {
   font-size: 0.8rem;
   text-align: left;
@@ -505,6 +515,10 @@ nav a {
 .card-text span {
   font-weight: 700;
   font-size: 0.8rem;
+}
+
+.card-footer a {
+  display: contents;
 }
 
 .card .text-muted {
@@ -561,24 +575,24 @@ nav a {
 ### 4. Section: Contact
 ----------------------------------------*/
 
-#section-four {
+.section:nth-child(even) {
   background-color: black;
   color: var(--bg-light);
 }
 
-#section-four .diamond {
+.section:nth-child(even) .diamond {
   background-color: var(--bg-dark);
   color: var(--bg-light);
 }
 
-#section-four .diamond span,
-#section-four .text,
-#section-four h1 {
+.section:nth-child(even) .diamond span,
+.section:nth-child(even) .text,
+.section:nth-child(even) h1 {
   color: var(--bg-light);
 }
 
 #section-four .wrapper {
-  border-top: 1px solid white;
+  border-top: 1px solid var(--bg-light);
   padding: 2rem 1rem 0 1rem;
 }
 
@@ -653,9 +667,13 @@ nav a {
     flex-direction: column;
     width: 100px;
     height: 80%;
-    margin-top: 0;
+    margin-bottom: 0;
     padding: 0 2rem;
     margin-right: 2rem;
+  }
+
+  .timeline-1 {
+    top: 40px;
   }
 
   .diamond span {
