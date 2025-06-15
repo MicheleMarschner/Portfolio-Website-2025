@@ -37,9 +37,9 @@ a:hover {
   cursor: pointer
 }
 
-ul {
+/*ul {
   list-style: none;
-}
+}*/
 
 h1,
 h2, 
@@ -627,7 +627,6 @@ nav a {
 
 @media (min-width: 768px) {
   * {
-    overflow: hidden;
     max-height: 100vh;
   }
 
@@ -703,6 +702,11 @@ nav a {
     width: 50vw;
   }
 
+  #section-one .wrapper ul {
+    margin: 1rem;
+    line-height: 1.5rem;
+  }
+
   .image-stack {
     margin: 0;
   }
@@ -754,7 +758,8 @@ nav a {
     margin-bottom: 2rem;
   }
 
-  #section-four ul {
+  #section-four li {
     justify-content: space-around;
+    list-style: none;
   }
 }
