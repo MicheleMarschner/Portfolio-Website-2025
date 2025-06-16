@@ -506,6 +506,16 @@ nav a {
   background-size: cover;
 }
 
+.card-picture-7 {
+  background: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('./img/portfolio_screenshots/ARS_screenshot.png') center;
+  background-size: cover;
+}
+
 .card-text {
   font-size: 0.8rem;
   text-align: left;
