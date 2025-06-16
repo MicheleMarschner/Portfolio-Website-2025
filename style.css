@@ -89,7 +89,7 @@ input:focus,input.active {
 }
 
 .primary-button {
-  margin-top: 2rem;
+  margin-top: 1rem;
   position: relative;
   border: 2px solid var(--primary);
   border-radius: 5px;
@@ -640,6 +640,10 @@ nav a {
     max-height: 100vh;
   }
 
+  body, html {
+    overflow: hidden;
+  }
+
   h1 {
     font-size: 2rem;
   }
@@ -703,7 +707,7 @@ nav a {
   #section-one .content {
     display: flex;
     flex-direction: row;
-    padding: 2rem 0;
+    padding: 1rem 0;
     gap: 50px;
   }
 
