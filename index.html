@@ -154,81 +154,282 @@
     </div>
     <div display="flex">
       <h1>Projects</h1>
+
+
+      <div class="project-filters" aria-label="Filter projects">
+        <button type="button" class="project-filter is-active"
+                data-filter="all" aria-pressed="true">
+          All Projects
+        </button>
+
+        <button type="button" class="project-filter"
+                data-filter="ml" aria-pressed="false">
+          ML & Research
+        </button>
+
+        <button type="button" class="project-filter"
+                data-filter="software" aria-pressed="false">
+          Software Engineering
+        </button>
+      </div>
+
       <div class="wrapper">
         <div class="glide">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
-              <li class="glide__slide">
-                <div class="card">
-                  <a
-                    href="https://ticketforvisa.com/"
-                    target="_blank"
-                  >
-                    <div class="card-picture card-picture-6"></div>
-        
-                    <h4 class="card-header">
-                      <span class="card-header-wrapper">Booking App</span>
-                    </h4>
-        
-                    <div class="card-body">
-                      <p class="card-text">
-                        <span>Aim: </span> building a high-performance, SEO-optimized website with a seamless booking experience.
-                      </p>
-                      <p class="card-text">
-                        <span>Tech Stack: </span> JavaScript | NextJS &
-                      Tailwind | Figma, Redis, Resend, Paypal-SDK, Contentful, Fuse.js, Google Analytics
-                      </p>
+              <li class="glide__slide" data-category="software">
+                <article class="card card--modern">
+                  <div class="card-picture card-picture-6"></div>
+
+                  <h4 class="card-header">
+                    <span class="card-header-wrapper">TicketForVisa</span>
+                  </h4>
+
+                  <div class="card-body">
+                    <p class="card-text">
+                      A production booking website with a multi-step booking flow,
+                      integrated payments, and content management.
+                    </p>
+                    <a href="./projects/ticketforvisa/"
+                      class="case-study-link">
+                      Explore Case Study <span aria-hidden="true">↗</span>
+                    </a>
+                    <div class="tech-tags">
+                      <span>Next.js</span>
+                      <span>React</span>
+                      <span>Redis</span>
+                      <span>PayPal</span>
+                      <span>Contentful</span>
                     </div>
-        
-                    <div class="card-footer">
-                      <div class="text-muted"
-                        >April-June 2025</div
-                      >
-                      <a
-                      href="https://wirps.com/3pfa8j"
-                      target="_blank"
-                      >
-                      <div class="social-item social-item-3"></div>
+                  </div>
+
+                  <div class="card-footer">
+                    <span class="text-muted">April–June 2025</span>
+
+                    
+                    <div class="card-actions">
+                      <a href="https://www.ticketforvisa.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open live website">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true">
+                          <path d="M15 3h6v6"/>
+                          <path d="M10 14 21 3"/>
+                          <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/>
+                        </svg>
+                        Live
+                      </a>
+
+                      <a href="https://github.com/MicheleMarschner/ticketforvisa-showcase"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View GitHub repository">
+                        <div class="social-item social-item-3"></div>
                       </a>
                     </div>
-                  </a>
-                </div>
+
+                  </div>
+                </article>
               </li>
-              <li class="glide__slide">
-                <div class="card">
-                  <a
-                    href="https://architectureresearchstage.de/index.html"
-                    target="_blank"
-                  >
-                    <div class="card-picture card-picture-7"></div>
-        
-                    <h4 class="card-header">
-                      <span class="card-header-wrapper">ARS - Research Project</span>
-                    </h4>
-        
-                    <div class="card-body">
-                      <p class="card-text">
-                        <span>Aim: </span> to foster interdisciplinary collaboration in networking architecture by connecting research outcomes, data, and contexts across academia, teaching, and practice.
-                      </p>
-                      <p class="card-text">
-                        <span>Tech Stack: </span> JavaScript, TypeScript, ReactJS, NodeJS | Firebase, Neo4j | Docker, Nginx, SASS
-                      </p>
+              <!-- Explanation Shift -->
+              <li class="glide__slide" data-category="ml">
+                <article class="card card--modern">
+                  <div class="card-picture card-picture-8"></div>
+
+                  <h4 class="card-header">
+                    <span class="card-header-wrapper">Explanation Shift</span>
+                  </h4>
+
+                  <div class="card-body">
+                    <p class="card-text">
+                      Investigating how model explanations change under
+                      distribution shift, even when predictions remain correct.
+                    </p>
+                    <a href="./projects/explanationshift/"
+                      class="case-study-link">
+                      Explore Case Study <span aria-hidden="true">↗</span>
+                    </a>
+                    <div class="tech-tags">
+                      <span>PyTorch</span>
+                      <span>XAI</span>
+                      <span>GradCAM</span>
+                      <span>Integrated Gradients</span>
+                      <span>Quantus</span>
                     </div>
-        
-                    <div class="card-footer">
-                      <div class="text-muted"
-                        >March-October 2022</div
-                      >
-                      <a
-                      href="https://gitlab.com/ars-project"
-                      target="_blank"
-                      >
-                      <div class="social-item social-item-3"></div>
+                  </div>
+
+                  <div class="card-footer">
+                    <span class="text-muted">ML Research</span>
+
+                    <div class="card-actions">
+                      <a href="https://github.com/MicheleMarschner/explanation_shift/blob/main/Report_Explanation_Shift_unter_Domain_Shift.pdf"
+                        target="_blank" rel="noopener noreferrer">
+                        Report
+                      </a>
+
+                      <a href="https://github.com/MicheleMarschner/explanation_shift"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="View Explanation Shift on GitHub">
+                        <div class="social-item social-item-3"></div>
                       </a>
                     </div>
-                  </a>
-                </div>
+                  </div>
+                </article>
               </li>
+              <!-- Jaguar Re-ID -->
+              <li class="glide__slide" data-category="ml">
+                <article class="card card--modern">
+                  <div class="card-picture card-picture-9">
+                    <img src="./img/portfolio_screenshots/jaguar_reid_left.png"
+                        alt="Jaguar – left flank">
+                    <img src="./img/portfolio_screenshots/jaguar_reid_right.png"
+                        alt="Jaguar – right flank">
+                  </div>
+                  <h4 class="card-header">
+                    <span class="card-header-wrapper">Jaguar Re-ID</span>
+                  </h4>
+
+                  <div class="card-body">
+                    <p class="card-text">
+                      Exploring computer vision approaches for identifying
+                      individual jaguars through reproducible deep learning
+                      experiments.
+                    </p>
+
+                    <div class="tech-tags">
+                      <span>PyTorch</span>
+                      <span>Computer Vision</span>
+                      <span>Re-ID</span>
+                      <span>Captum</span>
+                      <span>W&B</span>
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <span class="text-muted">ML Research</span>
+                    <div class="card-actions">
+                      <a href="https://github.com/MicheleMarschner/jaguar_project/blob/main/reports/E00_experiments_outline.md"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View experiment overview">
+                        Report
+                      </a>
+
+                      <a href="https://github.com/MicheleMarschner/jaguar_project"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View Jaguar Re-ID on GitHub">
+                        <div class="social-item social-item-3"></div>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <!-- BeyondLiteral -->
+              <li class="glide__slide" data-category="ml">
+                <article class="card card--modern">
+                  <div class="card-picture card-picture-10"></div>
+
+                  <h4 class="card-header">
+                    <span class="card-header-wrapper">BeyondLiteral</span>
+                  </h4>
+
+                  <div class="card-body">
+                    <p class="card-text">
+                      Investigating multilingual idiomaticity detection using
+                      lexical baselines and transformer models, with a focus
+                      on context and cross-lingual transfer.
+                    </p>
+
+                    <div class="tech-tags">
+                      <span>Python</span>
+                      <span>NLP</span>
+                      <span>mBERT</span>
+                      <span>scikit-learn</span>
+                      <span>Docker</span>
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <span class="text-muted">ML Research</span>
+
+                    <div class="card-actions">
+                      <a href="https://github.com/MicheleMarschner/BeyondLiteral_Idiomaticity_Detection_ANLP_Project/blob/main/ANLP_project_report.pdf"
+                        target="_blank" rel="noopener noreferrer">
+                        Report
+                      </a>
+
+                      <a href="https://github.com/MicheleMarschner/BeyondLiteral_Idiomaticity_Detection_ANLP_Project"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="View BeyondLiteral on GitHub">
+                        <div class="social-item social-item-3"></div>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </li>
+
+              <li class="glide__slide" data-category="software">
+                <article class="card card--modern">
+                  <div class="card-picture card-picture-7"></div>
+
+                  <h4 class="card-header">
+                    <span class="card-header-wrapper">ARS Research</span>
+                  </h4>
+
+                  <div class="card-body">
+                    <p class="card-text">
+                      A research platform connecting architectural research,
+                      data, and contexts across academia, teaching, and practice.
+                    </p>
+
+                    <div class="tech-tags">
+                      <span>React</span>
+                      <span>TypeScript</span>
+                      <span>Node.js</span>
+                      <span>Neo4j</span>
+                      <span>Firebase</span>
+                      <span>Docker</span>
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <span class="text-muted">March–October 2022</span>
+
+                    <div class="card-actions">
+                      <a href="https://architectureresearchstage.de/index.html"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Open ARS website">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                          <path d="M15 3h6v6"/>
+                          <path d="M10 14 21 3"/>
+                          <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/>
+                        </svg>
+                        Live
+                      </a>
+
+                      <a href="https://gitlab.com/ars-project"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="View ARS GitLab projects">
+                        GitLab
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <!-- 
               <li class="glide__slide">
                 <div class="card">
                   <a
@@ -264,85 +465,117 @@
                   </a>
                 </div>
               </li>
-              <li class="glide__slide">
-              <div class="card">
-                <a
-                  href="https://admin-dashboard-124.netlify.app/"
-                  target="_blank"
-                >
-                  <div class="card-picture card-picture-4"></div>
-      
-                  <h4 class="card-header">
-                    <span class="card-header-wrapper">Admin Dashboard</span>
-                  </h4>
-      
-                  <div class="card-body">
-                    <p class="card-text">
-                      <span>Aim: </span>developing a sleek and responsive admin dashboard providing companies a real-time overview of key data and operations.
-                    </p>
-                    <p class="card-text">
-                      <span>Tech Stack: </span>JavaScript | Frontend: ReactJS &
-                      Bootstrap | echarts, apexcharts
-                    </p>
+              -->       
+            <li class="glide__slide" data-category="software">
+              <article class="card card--modern">
+                <div class="card-picture card-picture-4"></div>
+
+                <h4 class="card-header">
+                  <span class="card-header-wrapper">Admin Dashboard</span>
+                </h4>
+
+                <div class="card-body">
+                  <p class="card-text">
+                    A responsive admin dashboard for visualizing key business
+                    metrics, analytics, and operational data.
+                  </p>
+
+                  <div class="tech-tags">
+                    <span>React</span>
+                    <span>Bootstrap</span>
+                    <span>ECharts</span>
+                    <span>ApexCharts</span>
                   </div>
-      
-                  <div class="card-footer">
-                    <div class="text-muted"
-                      >September 2024</div
-                    >
-                    <a
-                    href="https://github.com/MicheleMarschner/adminDashboardReact"
-                    target="_blank"
-                    >
-                    <div class="social-item social-item-3"></div>
+                </div>
+
+                <div class="card-footer">
+                  <span class="text-muted">September 2024</span>
+
+                  <div class="card-actions">
+                    <a href="https://admin-dashboard-124.netlify.app/"
+                      target="_blank" rel="noopener noreferrer"
+                      aria-label="Open live demo">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                          width="16" height="16" viewBox="0 0 24 24"
+                          fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"
+                          aria-hidden="true">
+                        <path d="M15 3h6v6"/>
+                        <path d="M10 14 21 3"/>
+                        <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/>
+                      </svg>
+                      Live
+                    </a>
+
+                    <a href="https://github.com/MicheleMarschner/adminDashboardReact"
+                      target="_blank" rel="noopener noreferrer"
+                      aria-label="View GitHub repository">
+                      <div class="social-item social-item-3"></div>
                     </a>
                   </div>
-                </a>
-              </div>
+                </div>
+              </article>
             </li>
-            <li class="glide__slide">
-              <div class="card">
-                <a
-                  href="https://e-commerce-shop-frontend-six.vercel.app/"
-                  target="_blank"
-                >
-                  <div class="card-picture card-picture-5"></div>
-      
-                  <h4 class="card-header">
-                    <span class="card-header-wrapper">Ecommerce Shop</span>
-                  </h4>
-      
-                  <div class="card-body">
-                    <p class="card-text">
-                      <span>Aim: </span>built an eCommerce platform with Next.js and Stripe to be up-to-date with commonly used frameworks and payment processing technologies. 
-                    </p>
-                    <p class="card-text">
-                      <span>Tech Stack: </span>JavaScript | Frontend: ReactJS, styled-components | Backend: NextJS | Stripe
-                    </p>
+            <li class="glide__slide" data-category="software">
+              <article class="card card--modern">
+                <div class="card-picture card-picture-5"></div>
+
+                <h4 class="card-header">
+                  <span class="card-header-wrapper">E-Commerce Shop</span>
+                </h4>
+
+                <div class="card-body">
+                  <p class="card-text">
+                    A full-stack e-commerce application featuring an electronics
+                    catalog, persistent shopping cart, and Stripe Checkout.
+                  </p>
+
+                  <div class="tech-tags">
+                    <span>Next.js</span>
+                    <span>React</span>
+                    <span>MongoDB</span>
+                    <span>Stripe</span>
+                    <span>Styled Components</span>
                   </div>
-      
-                  <div class="card-footer">
-                    <div class="text-muted"
-                      >September 2024</div
-                    >
-                    <div class="wrapper">
-                      <a
-                        href="https://github.com/MicheleMarschner/eCommerceShop_frontend"
-                        target="_blank"
-                        >
-                        <div class="social-item social-item-3"></div>
-                      </a>
-                      <a
-                        href="https://github.com/MicheleMarschner/eCommerceShop_admindashboard"
-                        target="_blank"
-                        >
-                        <div class="social-item social-item-3"></div>
-                      </a>
-                    </div>
+                </div>
+
+                <div class="card-footer">
+                  <span class="text-muted">September 2024</span>
+
+                  <div class="card-actions">
+                    <a href="https://e-commerce-shop-frontend-six.vercel.app/"
+                      target="_blank" rel="noopener noreferrer"
+                      aria-label="Open live demo">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                          width="16" height="16" viewBox="0 0 24 24"
+                          fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"
+                          aria-hidden="true">
+                        <path d="M15 3h6v6"/>
+                        <path d="M10 14 21 3"/>
+                        <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/>
+                      </svg>
+                      Live
+                    </a>
+
+                    <a href="https://github.com/MicheleMarschner/eCommerceShop_frontend"
+                      target="_blank" rel="noopener noreferrer"
+                      aria-label="View storefront GitHub repository"
+                      title="Storefront repository">
+                      <div class="social-item social-item-3"></div>
+                    </a>
+
+                    <a href="https://github.com/MicheleMarschner/eCommerceShop_admindashboard"
+                      target="_blank" rel="noopener noreferrer"
+                      aria-label="View admin dashboard GitHub repository"
+                      title="Admin dashboard repository">
+                      <div class="social-item social-item-3"></div>
+                    </a>
                   </div>
-                </a>
-              </div>
+                </div>
+              </article>
             </li>
+            <!--
             <li class="glide__slide">
               <div class="card">
                 <a href="https://todo-app-db1295.netlify.app" target="_blank">
@@ -473,6 +706,7 @@
                 </a>
               </div>
             </li>
+            -->
             </ul>
           </div>
           <div class="glide__arrows" data-glide-el="controls">

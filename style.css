@@ -516,6 +516,33 @@ nav a {
   background-size: cover;
 }
 
+.card-picture-8 {
+  background: url('./img/portfolio_screenshots/explanation_shift.png')
+    center / contain no-repeat;
+  background-color: #f0eeee;
+}
+
+
+.card-picture-9 {
+  display: flex;
+  background: #171717;
+}
+
+.card-picture-9 img {
+  width: 50%;
+  height: 100%;
+  min-width: 0;
+  object-fit: contain;
+}
+
+
+.card-picture-10 {
+  background: url('./img/portfolio_screenshots/beyondliteral.png')
+    center / contain no-repeat;
+  background-color: #f0eeee;
+}
+
+
 .card-text {
   font-size: 0.8rem;
   text-align: left;
@@ -776,4 +803,169 @@ nav a {
     justify-content: space-around;
     list-style: none;
   }
+}
+
+
+.card-footer .card-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.card-footer .card-actions a {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.card-footer .card-actions a:hover {
+  color: var(--primary);
+}
+
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.8rem;
+}
+
+.tech-tags span {
+  font-size: 0.65rem;
+  padding: 0.2rem 0.5rem;
+  background: #f0eeee;
+  border-radius: 4px;
+  color: var(--text);
+}
+
+.card-footer .card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.card-footer .card-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: auto;
+  height: auto;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.card-footer .card-actions a:hover {
+  color: var(--primary);
+}
+
+
+
+/* New project card layout */
+.card--modern {
+  display: flex;
+  flex-direction: column;
+}
+
+.card--modern .card-picture {
+  flex: 0 0 35%;
+  height: auto;
+}
+
+.card--modern .card-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card--modern .card-text {
+  font-size: 0.75rem;
+  line-height: 1.15rem;
+}
+
+.card--modern .tech-tags {
+  margin-top: auto;
+  gap: 0.3rem;
+}
+
+.card--modern .tech-tags span {
+  font-size: 0.6rem;
+  padding: 0.15rem 0.4rem;
+  background: #f0eeee;
+  border: none;
+  border-radius: 4px;
+}
+
+.card--modern .card-footer {
+  position: static;
+  flex-shrink: 0;
+}
+
+
+
+/* Project category filters */
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: -0.5rem 0 1rem;
+}
+
+.project-filter {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.project-filter:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.project-filter.is-active {
+  background: var(--text);
+  border-color: var(--text);
+  color: white;
+}
+
+@media (max-width: 767px) {
+  #section-three .card--modern {
+    width: calc(100% - 2rem);
+    height: auto;
+    min-height: 22rem;
+  }
+
+  #section-three .card--modern .card-picture {
+    flex: 0 0 auto;
+    height: 130px;
+  }
+}
+
+
+
+.card--modern .card-body .case-study-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.3rem;
+  width: auto;
+  height: auto;
+  margin-top: 0.75rem;
+  color: var(--primary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card--modern .card-body .case-study-link:hover {
+  text-decoration: underline;
 }

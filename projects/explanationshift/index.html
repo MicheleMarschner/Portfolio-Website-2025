@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Explanation Shift | Case Study</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../case-study.css">
+</head>
+
+<body class="case-study-page">
+
+  <main class="case-study">
+
+    <!-- Navigation -->
+    <nav class="case-nav">
+      <a href="../../index.html#section-three" class="back-link">
+        <span aria-hidden="true">←</span> Back to Projects
+      </a>
+      <span class="case-label">CASE STUDY / 02</span>
+    </nav>
+
+    <!-- Hero -->
+    <header class="case-hero">
+      <p class="case-eyebrow">
+        MACHINE LEARNING · EXPLAINABLE AI · RESEARCH
+      </p>
+
+      <h1>Explanation Shift</h1>
+
+      <p class="case-intro">
+        How reliable are model explanations under distribution shift?
+        Investigating how visual explanations change as image
+        corruptions increase, including cases where model
+        predictions remain correct.
+      </p>
+
+      <div class="case-tags">
+        <span>Python</span>
+        <span>PyTorch</span>
+        <span>Computer Vision</span>
+        <span>GradCAM</span>
+        <span>Integrated Gradients</span>
+        <span>Quantus</span>
+      </div>
+
+      <div class="case-links">
+        <a href="https://github.com/MicheleMarschner/explanation_shift"
+           target="_blank" rel="noopener noreferrer">
+          GitHub ↗
+        </a>
+
+        <a href="https://github.com/MicheleMarschner/explanation_shift/blob/main/Report_Explanation_Shift_unter_Domain_Shift.pdf"
+           target="_blank" rel="noopener noreferrer">
+          Full Research Report ↗
+        </a>
+      </div>
+    </header>
+    <!-- Research Overview -->
+    <section class="case-overview">
+
+    <div class="case-overview-block">
+        <p class="case-section-label">01 / RESEARCH QUESTIONS</p>
+        <h2>When Predictions Stay Stable, Do Explanations?</h2>
+
+        <p>
+        Explainable AI methods help us understand which parts of
+        an input influence a model's prediction. But how reliable
+        are these explanations when the input distribution changes?
+        </p>
+
+        <p>
+        This research investigates three questions:
+        </p>
+
+        <ul class="case-contributions">
+        <li>
+            How does explanation drift change as distribution
+            shifts become more severe?
+        </li>
+        <li>
+            Can explanations change substantially even when
+            model predictions remain correct?
+        </li>
+        <li>
+            How do explanation-quality metrics respond to
+            distribution shift?
+        </li>
+        </ul>
+    </div>
+
+    <div class="case-overview-block">
+        <p class="case-section-label">02 / EXPERIMENTAL SETUP</p>
+        <h2>Controlled Distribution Shifts</h2>
+
+        <p>
+        I designed a controlled experimental pipeline to compare
+        model predictions and explanations on clean and corrupted
+        versions of the same images.
+        </p>
+
+        <ul class="case-contributions">
+        <li>
+            <strong>Model:</strong> ResNet-18 image classifier
+        </li>
+        <li>
+            <strong>Data:</strong> CIFAR-10 and CIFAR-10-C
+        </li>
+        <li>
+            <strong>Corruptions:</strong> Gaussian noise, defocus
+            blur, brightness, and fog
+        </li>
+        <li>
+            <strong>Explanation methods:</strong> GradCAM and
+            Integrated Gradients
+        </li>
+        <li>
+            <strong>Evaluation:</strong> Predictive performance,
+            explanation drift, and Quantus metrics
+        </li>
+        </ul>
+
+        <p>
+        Experiments were repeated across corruption severity
+        levels and random seeds to investigate the consistency
+        of observed effects.
+        </p>
+    </div>
+
+    </section>
+    <section class="case-findings">
+    <p class="case-section-label">03 / KEY FINDINGS</p>
+    <h2>What Did the Experiments Reveal?</h2>
+
+    <article class="case-finding">
+        <span class="case-finding-number">FINDING 01</span>
+        <h3>Explanation Drift Increases with Shift Severity</h3>
+        <p>
+        Both GradCAM and Integrated Gradients show increasing
+        explanation drift as corruption severity rises. However,
+        the magnitude and progression depend on the corruption
+        type and explanation method.
+        </p>
+
+        <figure>
+        <img
+            src="../../img/research/explanation_drift_by_severity.png"
+            alt="Explanation drift across severity levels for GradCAM and Integrated Gradients"
+            loading="lazy"
+        >
+        <figcaption>
+            Explanation drift across severity levels
+        </figcaption>
+        </figure>
+    </article>
+
+    <article class="case-finding">
+        <span class="case-finding-number">FINDING 02</span>
+        <h3>Correct Predictions Do Not Guarantee Stable Explanations</h3>
+        <p>
+        Substantial explanation drift persists even when predictions
+        remain unchanged and correct. These examples illustrate
+        silent drift: the model's output remains correct, while
+        the attribution changes considerably.
+        </p>
+
+        <figure>
+        <img
+        src="../../img/research/silent_drift_ig.png"
+        alt="Silent drift example using Integrated Gradients"
+        loading="lazy"
+        >
+        <img
+        src="../../img/research/silent_drift_gradcam.png"
+        alt="Silent drift example using GradCAM"
+        loading="lazy"
+        >
+        <figcaption>
+            Qualitative examples under fog corruption
+        </figcaption>
+        </figure>
+    </article>
+
+    <article class="case-finding">
+        <span class="case-finding-number">FINDING 03</span>
+        <h3>Explanation Metrics Behave Differently Across Methods</h3>
+        <p>
+        Sparseness responds differently for GradCAM and Integrated
+        Gradients. GradCAM's metric change largely disappears when
+        restricting evaluation to stable, correct predictions,
+        whereas Integrated Gradients retains structured changes.
+        </p>
+
+        <figure>
+        <img
+            src="../../img/research/explanation_sparseness_by_explainer.png"
+            alt="Sparseness metric changes for GradCAM and Integrated Gradients across prediction subsets"
+            loading="lazy"
+        >
+        <figcaption>
+            Sparseness changes across evaluation subsets
+        </figcaption>
+        </figure>
+    </article>
+    </section>
+    <!-- Research Contributions & Takeaways -->
+    <section class="case-overview">
+
+    <div class="case-overview-block">
+        <p class="case-section-label">04 / MY CONTRIBUTIONS</p>
+        <h2>Independent Research</h2>
+
+        <p>
+        I conducted this research project independently,
+        from designing the experiments to implementing
+        the evaluation pipeline and analyzing the results.
+        </p>
+
+        <ul class="case-contributions">
+        <li>
+            Designed controlled experiments to investigate
+            explanation drift under distribution shift
+        </li>
+        <li>
+            Implemented the experimental and evaluation pipeline
+            using PyTorch, Captum, and Quantus
+        </li>
+        <li>
+            Compared GradCAM and Integrated Gradients across
+            corruption types and severity levels
+        </li>
+        <li>
+            Analyzed explanation stability for different
+            prediction subsets, including stable and correct
+            predictions
+        </li>
+        <li>
+            Evaluated and interpreted quantitative metrics
+            alongside qualitative attribution examples
+        </li>
+        </ul>
+    </div>
+
+    <div class="case-overview-block">
+        <p class="case-section-label">05 / RESEARCH TAKEAWAYS</p>
+        <h2>Beyond Prediction Accuracy</h2>
+
+        <p>
+        The experiments demonstrate that stable predictions
+        do not necessarily imply stable explanations.
+        A model may continue to classify an image correctly
+        while its attribution patterns change substantially.
+        </p>
+
+        <p>
+        The results also highlight the importance of
+        considering the explanation method and evaluation
+        metric when assessing explanation robustness.
+        </p>
+
+        <p>
+        Evaluating model behavior under distribution shift
+        therefore requires looking beyond prediction accuracy
+        alone.
+        </p>
+    </div>
+
+    </section>
+    <!-- Conclusion -->
+    <section class="case-conclusion">
+    <p class="case-section-label">06 / EXPLORE THE RESEARCH</p>
+    <h2>Code, Experiments & Full Report</h2>
+
+    <p>
+        The complete research report provides the experimental
+        methodology, quantitative results, qualitative examples,
+        and detailed discussion of the findings.
+    </p>
+
+    <div class="case-conclusion-links">
+        <a
+        href="https://github.com/MicheleMarschner/explanation_shift/blob/main/Report_Explanation_Shift_unter_Domain_Shift.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="case-primary-link"
+        >
+        Read Full Report ↗
+        </a>
+
+        <a
+        href="https://github.com/MicheleMarschner/explanation_shift"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+        View on GitHub ↗
+        </a>
+    </div>
+    </section>
+    <!-- Footer -->
+    <footer class="case-page-footer">
+    <a href="../../index.html#section-three">
+        ← Back to Projects
+    </a>
+
+    <span>Explanation Shift · Research Case Study</span>
+    </footer>
+  </main>
+
+</body>
+</html>

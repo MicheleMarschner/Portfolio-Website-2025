@@ -1,0 +1,543 @@
+
+:root {
+  --primary: #EB2248;
+  --title: #121212;
+  --text: #555555;
+  --bg-light: #f9f8f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.case-study-page {
+  margin: 0;
+  background: var(--bg-light);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Arial, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.case-study {
+  width: min(1100px, calc(100% - 4rem));
+  margin: 0 auto;
+}
+
+/* Navigation */
+
+.case-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem 0 1.5rem;
+  border-bottom: 1px solid #dedede;
+}
+
+.back-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.back-link:hover,
+.case-links a:hover {
+  color: var(--primary);
+}
+
+.case-label,
+.case-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+/* Hero */
+
+.case-hero {
+  padding: 5rem 0 3rem;
+}
+
+.case-eyebrow {
+  margin: 0 0 1.25rem;
+}
+
+.case-hero h1 {
+  font-family: "Kanit", sans-serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--title);
+  margin: 0 0 1.5rem;
+}
+
+.case-intro {
+  max-width: 700px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 0 0 2rem;
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.case-tags span {
+  background: #f0eeee;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.case-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.case-links a {
+  color: var(--title);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Project Image */
+
+.case-preview {
+  margin: 1rem 0 5rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.case-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .case-study {
+    width: calc(100% - 2rem);
+  }
+
+  .case-nav {
+    padding-top: 1.5rem;
+  }
+
+  .case-hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .case-intro {
+    font-size: 1rem;
+  }
+
+  .case-label {
+    font-size: 0.6rem;
+  }
+}
+
+
+
+/* Project overview */
+
+.case-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  padding: 2rem 0 5rem;
+  border-top: 1px solid #dedede;
+}
+
+.case-section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+}
+
+.case-overview h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--title);
+  margin: 0 0 1.5rem;
+}
+
+.case-overview-block > p:not(.case-section-label) {
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.case-contributions {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+.case-contributions li {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .case-overview {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+  }
+}
+
+
+/* Technical implementation */
+
+.case-technical {
+  padding: 2rem 0 6rem;
+  border-top: 1px solid #dedede;
+}
+
+.case-technical h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--title);
+  margin: 0 0 1rem;
+}
+
+.case-technical-intro {
+  max-width: 680px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+/* Booking flow */
+
+.case-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.case-flow-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: #f0eeee;
+  border-radius: 6px;
+}
+
+.case-flow-step > span {
+  color: var(--primary);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.case-flow-step strong {
+  color: var(--title);
+  font-size: 0.9rem;
+}
+
+.case-flow-step small {
+  color: var(--text);
+  font-size: 0.75rem;
+}
+
+/* Technical highlights */
+
+.case-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 5rem;
+  row-gap: 3rem;
+}
+
+.case-tech-item {
+  border-top: 1px solid #d5d5d5;
+  padding-top: 1.5rem;
+}
+
+.case-tech-number {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+}
+
+.case-tech-item h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--title);
+  margin: 0.75rem 0 1rem;
+}
+
+.case-tech-item p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .case-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-tech-grid {
+    column-gap: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .case-flow,
+  .case-tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-flow {
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .case-technical {
+    padding-bottom: 3rem;
+  }
+}
+
+
+
+/* Booking experience */
+
+.case-showcase {
+  padding: 3rem 0 6rem;
+  border-top: 1px solid #dedede;
+}
+
+.case-showcase h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--title);
+  margin: 0 0 1rem;
+}
+
+.case-showcase-intro {
+  max-width: 680px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.case-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.case-gallery figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.case-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.case-gallery figcaption {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+@media (max-width: 767px) {
+  .case-gallery {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .case-showcase {
+    padding-bottom: 3rem;
+  }
+}
+
+
+/* Case study conclusion */
+
+.case-conclusion {
+  border-top: 1px solid #dedede;
+  padding: 4rem 0 5rem;
+}
+
+.case-conclusion h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--title);
+  margin: 0 0 1.5rem;
+}
+
+.case-conclusion > p:not(.case-section-label) {
+  max-width: 680px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.case-conclusion-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.case-conclusion-links a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.case-conclusion-links .case-primary-link {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 0.85rem 1.4rem;
+  border-radius: 5px;
+}
+
+.case-conclusion-links a:hover {
+  color: var(--primary);
+}
+
+.case-conclusion-links .case-primary-link:hover {
+  background: #c81e3f;
+  color: white;
+}
+
+/* Footer */
+
+.case-page-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid #dedede;
+  padding: 2rem 0 3rem;
+  font-size: 0.8rem;
+}
+
+.case-page-footer a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.case-page-footer a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 767px) {
+  .case-conclusion {
+    padding: 3rem 0;
+  }
+
+  .case-page-footer {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Research findings */
+
+.case-findings {
+  padding: 4rem 0 6rem;
+  border-top: 1px solid #dedede;
+}
+
+.case-findings h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--title);
+  margin-bottom: 3rem;
+}
+
+.case-finding {
+  margin-bottom: 5rem;
+}
+
+.case-finding-number {
+  color: var(--primary);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.case-finding h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--title);
+  margin: 0.75rem 0 1rem;
+}
+
+.case-finding > p {
+  max-width: 720px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.case-finding figure {
+  width: calc(100% - 2rem);
+  max-width: 59rem;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.case-finding img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.case-finding figcaption {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--text);
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .case-findings {
+    padding: 3rem 0;
+  }
+
+  .case-finding {
+    margin-bottom: 3rem;
+  }
+
+  .case-finding h3 {
+    font-size: 1.3rem;
+  }
+}
+
+
