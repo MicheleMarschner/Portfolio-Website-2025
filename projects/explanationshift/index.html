@@ -65,74 +65,84 @@
     <!-- Research Overview -->
     <section class="case-overview">
 
-    <div class="case-overview-block">
-        <p class="case-section-label">01 / RESEARCH QUESTIONS</p>
-        <h2>When Predictions Stay Stable, Do Explanations?</h2>
+        <div class="case-overview-block">
+            <p class="case-section-label">01 / RESEARCH QUESTIONS</p>
+            <h2>When Predictions Stay Stable, Do Explanations?</h2>
 
-        <p>
-        Explainable AI methods help us understand which parts of
-        an input influence a model's prediction. But how reliable
-        are these explanations when the input distribution changes?
-        </p>
+            <p>
+            Explainable AI methods help us understand which parts of
+            an input influence a model's prediction. But how reliable
+            are these explanations when the input distribution changes?
+            </p>
 
-        <p>
-        This research investigates three questions:
-        </p>
+            <p>
+            This research investigates three questions:
+            </p>
 
-        <ul class="case-contributions">
-        <li>
-            How does explanation drift change as distribution
-            shifts become more severe?
-        </li>
-        <li>
-            Can explanations change substantially even when
-            model predictions remain correct?
-        </li>
-        <li>
-            How do explanation-quality metrics respond to
-            distribution shift?
-        </li>
-        </ul>
-    </div>
+            <ul class="case-contributions">
+            <li>
+                How does explanation drift change as distribution
+                shifts become more severe?
+            </li>
+            <li>
+                Can explanations change substantially even when
+                model predictions remain correct?
+            </li>
+            <li>
+                How do explanation-quality metrics respond to
+                distribution shift?
+            </li>
+            </ul>
+        </div>
+        <!-- Experimental Design & Implementation -->
+        <div class="case-technical">
+            <p class="case-section-label">
+                02 / EXPERIMENTAL DESIGN & IMPLEMENTATION
+            </p>
 
-    <div class="case-overview-block">
-        <p class="case-section-label">02 / EXPERIMENTAL SETUP</p>
-        <h2>Controlled Distribution Shifts</h2>
+            <h2>Controlled Distribution Shifts</h2>
 
-        <p>
-        I designed a controlled experimental pipeline to compare
-        model predictions and explanations on clean and corrupted
-        versions of the same images.
-        </p>
+            <p>
+                I independently designed and implemented an experimental
+                pipeline to investigate how model predictions and visual
+                explanations change under distribution shift. By pairing
+                clean CIFAR-10 images with their corrupted counterparts
+                from CIFAR-10-C, I could compare predictions and
+                attributions for the same image under different conditions.
+            </p>
 
-        <ul class="case-contributions">
-        <li>
-            <strong>Model:</strong> ResNet-18 image classifier
-        </li>
-        <li>
-            <strong>Data:</strong> CIFAR-10 and CIFAR-10-C
-        </li>
-        <li>
-            <strong>Corruptions:</strong> Gaussian noise, defocus
-            blur, brightness, and fog
-        </li>
-        <li>
-            <strong>Explanation methods:</strong> GradCAM and
-            Integrated Gradients
-        </li>
-        <li>
-            <strong>Evaluation:</strong> Predictive performance,
-            explanation drift, and Quantus metrics
-        </li>
-        </ul>
+            <ul class="case-contributions">
+                <li>
+                <strong>Model:</strong> ResNet-18 trained on CIFAR-10
+                </li>
+                <li>
+                <strong>Data:</strong> CIFAR-10 and CIFAR-10-C
+                </li>
+                <li>
+                <strong>Corruptions:</strong> Gaussian noise, defocus blur,
+                brightness, and fog
+                </li>
+                <li>
+                <strong>Explanation methods:</strong> GradCAM and
+                Integrated Gradients, implemented with Captum
+                </li>
+                <li>
+                <strong>Evaluation:</strong> Predictive behaviour,
+                explanation drift, and explanation-quality metrics
+                using Quantus
+                </li>
+            </ul>
 
-        <p>
-        Experiments were repeated across corruption severity
-        levels and random seeds to investigate the consistency
-        of observed effects.
-        </p>
-    </div>
-
+            <p>
+                Experiments were repeated across multiple corruption
+                severity levels and five random seeds. To distinguish
+                explanation drift from prediction failures, I analyzed
+                all samples alongside subsets with unchanged predictions
+                and predictions that remained correct under corruption.
+                Quantitative results were complemented by qualitative
+                comparisons of attribution maps.
+            </p>
+        </div>
     </section>
     <section class="case-findings">
     <p class="case-section-label">03 / KEY FINDINGS</p>
@@ -211,86 +221,44 @@
     </section>
     <!-- Research Contributions & Takeaways -->
     <section class="case-overview">
+        <div class="case-overview-block">
+            <p class="case-section-label">04 / RESEARCH TAKEAWAYS</p>
+            <h2>Beyond Prediction Accuracy</h2>
 
-    <div class="case-overview-block">
-        <p class="case-section-label">04 / MY CONTRIBUTIONS</p>
-        <h2>Independent Research</h2>
+            <p>
+            The experiments demonstrate that stable predictions
+            do not necessarily imply stable explanations.
+            A model may continue to classify an image correctly
+            while its attribution patterns change substantially.
+            </p>
 
-        <p>
-        I conducted this research project independently,
-        from designing the experiments to implementing
-        the evaluation pipeline and analyzing the results.
-        </p>
+            <p>
+            The results also highlight the importance of
+            considering the explanation method and evaluation
+            metric when assessing explanation robustness.
+            </p>
 
-        <ul class="case-contributions">
-        <li>
-            Designed controlled experiments to investigate
-            explanation drift under distribution shift
-        </li>
-        <li>
-            Implemented the experimental and evaluation pipeline
-            using PyTorch, Captum, and Quantus
-        </li>
-        <li>
-            Compared GradCAM and Integrated Gradients across
-            corruption types and severity levels
-        </li>
-        <li>
-            Analyzed explanation stability for different
-            prediction subsets, including stable and correct
-            predictions
-        </li>
-        <li>
-            Evaluated and interpreted quantitative metrics
-            alongside qualitative attribution examples
-        </li>
-        </ul>
-    </div>
-
-    <div class="case-overview-block">
-        <p class="case-section-label">05 / RESEARCH TAKEAWAYS</p>
-        <h2>Beyond Prediction Accuracy</h2>
-
-        <p>
-        The experiments demonstrate that stable predictions
-        do not necessarily imply stable explanations.
-        A model may continue to classify an image correctly
-        while its attribution patterns change substantially.
-        </p>
-
-        <p>
-        The results also highlight the importance of
-        considering the explanation method and evaluation
-        metric when assessing explanation robustness.
-        </p>
-
-        <p>
-        Evaluating model behavior under distribution shift
-        therefore requires looking beyond prediction accuracy
-        alone.
-        </p>
-    </div>
-
+            <p>
+            Evaluating model behavior under distribution shift
+            therefore requires looking beyond prediction accuracy
+            alone.
+            </p>
+        </div>
     </section>
-    <!-- Conclusion -->
-    <section class="case-conclusion">
-    <p class="case-section-label">06 / EXPLORE THE RESEARCH</p>
-    <h2>Code, Experiments & Full Report</h2>
-
-    <p>
-        The complete research report provides the experimental
-        methodology, quantitative results, qualitative examples,
-        and detailed discussion of the findings.
-    </p>
+    <!-- Footer -->
+    <footer class="case-page-footer">
+    <a href="../../#section-three" class="back-link">
+        &larr; Back to Projects
+    </a>
 
     <div class="case-conclusion-links">
         <a
         href="https://github.com/MicheleMarschner/explanation_shift/blob/main/Report_Explanation_Shift_unter_Domain_Shift.pdf"
+        class="case-primary-link"
         target="_blank"
         rel="noopener noreferrer"
-        class="case-primary-link"
         >
-        Read Full Report ↗
+        Read Full Report &nearr;
         </a>
 
         <a
@@ -298,18 +266,13 @@
         target="_blank"
         rel="noopener noreferrer"
         >
-        View on GitHub ↗
+        View on GitHub &nearr;
         </a>
     </div>
-    </section>
-    <!-- Footer -->
-    <footer class="case-page-footer">
-    <a href="../../index.html#section-three">
-        ← Back to Projects
-    </a>
 
-    <span>Explanation Shift · Research Case Study</span>
+    <span>Explanation Shift · 2026</span>
     </footer>
+
   </main>
 
 </body>
