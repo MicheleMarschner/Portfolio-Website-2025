@@ -527,6 +527,7 @@ body.case-study-page {
 }
 
 @media (max-width: 767px) {
+
   .case-findings {
     padding: 3rem 0;
   }

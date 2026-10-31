@@ -361,14 +361,6 @@ nav a {
   z-index: 2;
 }
 
-.hex span:first-child {
-  top: -70px;
-}
-
-.hex span:last-child {
-  top: 70px;
-}
-
 .hex:hover img {
   opacity: 0;
 }
@@ -904,8 +896,6 @@ nav a {
   flex-shrink: 0;
 }
 
-
-
 /* Project category filters */
 
 .project-filters {
@@ -936,8 +926,29 @@ nav a {
   border-color: var(--text);
   color: white;
 }
-
+  
 @media (max-width: 767px) {
+  #section-two .hex-grid {
+    --hex-width: min(100px, calc((90vw - 40px) / 4));
+    --hex-gap: 8px;
+  }
+
+  #section-two .hex-row {
+    gap: var(--hex-gap);
+  }
+
+  #section-two .hex {
+    flex: 0 0 var(--hex-width);
+    width: var(--hex-width);
+    height: auto;
+    aspect-ratio: 100 / 115;
+    margin-right: 0;
+  }
+
+  #section-two .hex-row + .hex-row {
+    margin-top: calc(var(--hex-width) * -0.2875 + 8px);
+  }
+
   #section-three .card--modern {
     width: calc(100% - 2rem);
     height: auto;
@@ -949,8 +960,6 @@ nav a {
     height: 130px;
   }
 }
-
-
 
 .card--modern .card-body .case-study-link {
   display: inline-flex;
@@ -968,4 +977,91 @@ nav a {
 
 .card--modern .card-body .case-study-link:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #section-two .wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  #section-two .title {
+    width: auto;
+    margin-right: 0;
+  }
+
+  #section-two .title h1 {
+    text-align: center;
+  }
+
+  #section-two .hex-row {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  #section-two .hex {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 138px;
+    margin-right: 0;
+  }
+
+  #section-two .hex-grid {
+    width: min(100%, 560px);
+    position: static;
+    width: min(100%, 560px);
+    margin: 0 auto;
+    transform: none;
+  }
+
+  #section-two .hex-row + .hex-row {
+    margin-top: -20px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  #section-two .hex-row {
+    gap: 8px;
+  }
+
+  #section-two .hex {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 138px;
+    margin-right: 0;
+  }
+
+  #section-two .hex-row + .hex-row {
+    margin-top: -20px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  #section-two .hex span {
+    font-size: clamp(0.6rem, 2.4vw, 0.75rem);
+    line-height: 1.2;
+    width: 85%;
+    overflow-wrap: anywhere;
+  }
+}
+
+.hex--js-ts .skill-icons img:first-child {
+  width: 39.5px;
+  height: 39.5px;
+}
+
+.hex--js-ts .skill-icons img:last-child {
+  width: 31px;
+  height: 31px;
+}
+
+.hex--js-ts .skill-icons img:last-child {
+  position: relative;
+  top: -3px;
 }
