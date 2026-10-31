@@ -51,4 +51,42 @@ const config = {
     }
 }
 
-new Glide('.glide', config).mount()
+//new Glide('.glide', config).mount()
+
+
+const slideContainer = document.querySelector(
+  '#section-three .glide__slides'
+);
+
+// Store the original slides before Glide creates clones.
+const allSlides = Array.from(slideContainer.children);
+
+let glide = new Glide('.glide', config).mount();
+
+const filterButtons = document.querySelectorAll('.project-filter');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+
+    // Remove Glide's cloned slides and event listeners.
+    glide.destroy();
+
+    // Restore only the matching original slides.
+    const visibleSlides = allSlides.filter(slide =>
+      filter === 'all' || slide.dataset.category === filter
+    );
+
+    slideContainer.replaceChildren(...visibleSlides);
+
+    // Restart the carousel from the first visible project.
+    glide = new Glide('.glide', config).mount();
+
+    // Update active button styling and accessibility state.
+    filterButtons.forEach(btn => {
+      const active = btn === button;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
+  });
+});
