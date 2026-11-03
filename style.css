@@ -218,6 +218,8 @@ nav a {
   font-size: 0.7rem;
 }
 
+
+
 /*----------------------------------------
 ### 1. Section: About me
 ----------------------------------------*/
@@ -673,6 +675,7 @@ nav a {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     height: 100vh;
+    overflow-y: hidden;
   }
 
   .section {
@@ -1141,13 +1144,13 @@ nav a {
    Keep the original section padding, image dimensions, decoration and flex columns.
    This only controls the outer section's scrolling and width constraints. */
 @media (min-width: 768px) {
+
   #section-one {
     display: block;
-    overflow-y: auto;
     overflow-x: hidden;
-    overscroll-behavior-y: contain;
-    scrollbar-width: thin;
+    overflow-y: auto;
   }
+
   /* The existing global * { max-height: 100vh; } otherwise clips the story. */
   #section-one > div { width: 100%; min-width: calc(17rem + 50px + 50vw); }
   /* Preserve the original two-column sizing even on narrower desktops. */
